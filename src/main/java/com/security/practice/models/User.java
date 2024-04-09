@@ -3,7 +3,7 @@ package com.security.practice.models;
 public class User {
 	private String username;
 	private String password;
-    private	String email;
+        private String email;
     
 	public User(String username, String password, String email) {
 		super();
@@ -14,7 +14,6 @@ public class User {
 
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getUsername() {
@@ -45,8 +44,4 @@ public class User {
 	public String toString() {
 		return "User [username=" + username + ", password=" + password + ", email=" + email + "]";
 	}
-	
-	  
-	
-
 }
