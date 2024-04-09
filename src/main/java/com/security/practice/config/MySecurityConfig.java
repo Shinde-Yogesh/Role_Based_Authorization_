@@ -14,8 +14,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 
 public class MySecurityConfig extends WebSecurityConfiguration {
-
-	
 	protected void configure(HttpSecurity http) throws Exception {
 		
 		 http
@@ -25,26 +23,21 @@ public class MySecurityConfig extends WebSecurityConfiguration {
 				.and()
 				.httpBasic();
 	}
-	
-	
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 	auth.inMemoryAuthentication()
 	.withUser("Aditha")
 	.password(this.passwordEncoder().encode("Karikalam"))
 	.roles("NORMAL");
-	
-	
+		
 	auth.inMemoryAuthentication()
 	.withUser("Parantaka")
 	.password("Pandya")
 	.roles("ADMIN");
-	
 	}
 	
 	@Bean
 	public PasswordEncoder passwordEncoder()
 	{
 		return NoOpPasswordEncoder.getInstance();
-	}
-	
+	}	
 }
