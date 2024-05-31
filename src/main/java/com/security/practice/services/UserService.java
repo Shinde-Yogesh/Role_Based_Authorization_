@@ -30,7 +30,12 @@ public class UserService {
 	
 	public User getUser(String username)
 	{
-		return this.list.stream().filter((user)-> user.getUsername().equals(username)).findAny().orElse(null);
+		return this
+			.list
+			.stream()
+			.filter((user)-> user.getUsername().equals(username))
+			.findAny()
+			.orElse(null);
 	}
 	
 	//add user
