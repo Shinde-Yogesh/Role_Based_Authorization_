@@ -24,12 +24,10 @@ public class UserController {
 	@GetMapping("/all_users")
 	public List<User> get_allUsers()
 	{
-		
 		return this.userService.get_allUsers();
 	}
 	
 	//return single user
-	
 	@GetMapping("/{username}")
 	public User getUser(@PathVariable("username") String username)
 	{
