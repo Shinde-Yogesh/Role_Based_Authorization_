@@ -10,5 +10,4 @@ public class SpringSecurityDemoApplication {
 		SpringApplication.run(SpringSecurityDemoApplication.class, args);
 		System.out.println("Program is  Running ..");
 	}
-
 }
