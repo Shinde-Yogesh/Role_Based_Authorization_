@@ -9,7 +9,8 @@ import com.security.practice.models.User;
 
 @Service
 public class UserService {
-	
+
+	//Store the user in static form 
 	ArrayList<User> list = new ArrayList<>();
 	
 	public UserService()
@@ -19,15 +20,12 @@ public class UserService {
 	}
 	
 	//get all users
-	
 	public List<User> get_allUsers()
 	{
 		return this.list;
-		
 	}
 	
 	//get single user
-	
 	public User getUser(String username)
 	{
 		return this
@@ -39,7 +37,6 @@ public class UserService {
 	}
 	
 	//add user
-	
 	public User addUser(User user)
 	{
 		this.list.add(user);
